@@ -2,10 +2,22 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', []).
-  controller('MyCtrl1', [function() {
+var controllerModule = angular.module('myApp.controllers', []);
 
-  }])
-  .controller('MyCtrl2', [function() {
+controllerModule.controller('LedgerController', function ($scope, rippleService) {
 
-  }]);
+    function init() {
+        $scope.transactions = [];
+        $scope.ledger = null;
+    }
+
+    init();
+
+    rippleService.onTransactionUpdate(function (data) {
+        $scope.transactions.push(data);
+    });
+
+    rippleService.onLedgerUpdate(function (data) {
+        $scope.ledger = data;
+    });
+});
