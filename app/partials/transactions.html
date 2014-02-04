@@ -1,11 +1,14 @@
-<div kendo-grid k-data-source="transactions" k-selectable="'row'"
-     k-pageable='{ "refresh": true, "pageSizes": true }'
+<div kendo-grid k-data-source="transactions"
+     k-selectable="'row'"
+     k-pageable='{ "pageSize": 10, "refresh": true, "pageSizes": true }'
      k-columns='[
             { "field": "transaction.Account", "title": "Account"},
             { "field": "transaction.Fee", "title": "Fee"},
             { "field": "transaction.TransactionType", "title": "Type" },
             { "field": "transaction.date", "title": "Date" }
            ]'
-     k-sortable="true" k-groupable="true" k-filterable="true"
+     k-sortable="true"
+     k-groupable="false"
+     k-filterable="true"
      k-on-change="selectedItem = data">
 </div>
