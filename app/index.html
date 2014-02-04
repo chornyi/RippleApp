@@ -10,10 +10,12 @@
         <link rel="stylesheet" href="css/kendo/kendo.bootstrap.min.css"/>
     </head>
     <body>
-        <ul class="menu">
-            <li><a href="#/transactions">Transactions</a></li>
-            <li><a href="#/ledger">Ledger</a></li>
-        </ul>
+        <nav class="navbar navbar-default" role="navigation" ng-controller="HeaderController">
+            <ul class="nav navbar-nav">
+                <li ng-class="{ active: isActive('/transactions')}"><a href="#/transactions">Transactions</a></li>
+                <li ng-class="{ active: isActive('/ledger')}"><a href="#/ledger">Ledger</a></li>
+            </ul>
+        </nav>
 
         <div ng-view></div>
 

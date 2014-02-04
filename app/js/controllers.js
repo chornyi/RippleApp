@@ -8,8 +8,9 @@ controllerModule.controller('LedgerController', function ($scope, rippleService)
 
     function init() {
         $scope.transactions = new kendo.data.DataSource({
-            "pageSize":10
+            pageSize: 20
         });
+
         $scope.ledger = null;
     }
 
@@ -22,4 +23,10 @@ controllerModule.controller('LedgerController', function ($scope, rippleService)
     rippleService.onLedgerUpdate(function (data) {
         $scope.ledger = data;
     });
+});
+
+controllerModule.controller('HeaderController', function ($scope, $location) {
+    $scope.isActive = function (viewLocation) {
+        return viewLocation === $location.path();
+    };
 });

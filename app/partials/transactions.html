@@ -1,11 +1,12 @@
 <div kendo-grid k-data-source="transactions"
      k-selectable="'row'"
-     k-pageable='{ "pageSize": 10, "refresh": true, "pageSizes": true }'
+     k-pageable='{ "refresh": false, "pageSizes": [10, 20, 50, 100] }'
      k-columns='[
             { "field": "transaction.Account", "title": "Account"},
             { "field": "transaction.Fee", "title": "Fee"},
             { "field": "transaction.TransactionType", "title": "Type" },
-            { "field": "transaction.date", "title": "Date" }
+            { "field": "transaction.date", "title": "Date", format: "{0:yyyy-MM-dd}" },
+            { "field": "validated", "title": "Validated" }
            ]'
      k-sortable="true"
      k-groupable="false"
