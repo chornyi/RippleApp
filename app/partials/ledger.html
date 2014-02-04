@@ -1,1 +1,36 @@
-<p>This is the partial for view 2.</p>
+<div class="panel panel-default">
+    <div class="panel-heading">Latest Ledger</div>
+    <div class="panel-body">
+        <dl class="animate-show" ng-show="ledger">
+            <dt>Ledger Index</dt>
+            <dd>{{ ledger.ledger_index }}</dd>
+
+            <dt>Ledger Time</dt>
+            <dd>{{ ledger.ledger_time | date : 'yyyy-MM-dd HH:mm:ss.sss' }}</dd>
+
+            <dt>Fee Base</dt>
+            <dd>{{ ledger.fee_base }}</dd>
+
+            <dt>Fee Ref</dt>
+            <dd>{{ ledger.fee_ref }}</dd>
+
+            <dt>Ledger Hash Base</dt>
+            <dd>{{ ledger.ledger_hash }}</dd>
+
+            <dt>Transaction Count</dt>
+            <dd>{{ ledger.txn_count }}</dd>
+
+            <dt>Type</dt>
+            <dd>{{ ledger.type }}</dd>
+
+            <dt>Validated Ledgers</dt>
+            <dd>{{ ledger.validated_ledgers }}</dd>
+        </dl>
+    </div>
+
+    <div class="animate-show" ng-hide="ledger">
+        <p class="lead">Loading...</p>
+    </div>
+</div>
+
+
