@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-var controllerModule = angular.module('myApp.controllers', []);
+var controllerModule = angular.module('rippleApp.controllers', []);
 
 controllerModule.controller('RippleController', function ($scope, rippleService) {
 

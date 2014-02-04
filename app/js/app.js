@@ -2,12 +2,12 @@
 
 
 // Declare app level module which depends on filters, and services
-angular.module('myApp', [
+angular.module('rippleApp', [
         'ngRoute',
-        'myApp.filters',
-        'myApp.services',
-        'myApp.directives',
-        'myApp.controllers',
+        'rippleApp.filters',
+        'rippleApp.services',
+        'rippleApp.directives',
+        'rippleApp.controllers',
         'kendo.directives',
         'ui.bootstrap'
     ]).

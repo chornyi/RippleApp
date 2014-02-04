@@ -2,7 +2,7 @@
 
 /* Services */
 
-var serviceModule = angular.module('myApp.services', [])
+var serviceModule = angular.module('rippleApp.services', [])
 
 serviceModule.factory('rippleService', function ($rootScope) {
 
