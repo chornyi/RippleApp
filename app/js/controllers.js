@@ -4,7 +4,7 @@
 
 var controllerModule = angular.module('myApp.controllers', []);
 
-controllerModule.controller('LedgerController', function ($scope, rippleService) {
+controllerModule.controller('RippleController', function ($scope, rippleService) {
 
     function init() {
         $scope.transactions = new kendo.data.DataSource({

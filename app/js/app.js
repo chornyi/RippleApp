@@ -12,7 +12,7 @@ angular.module('myApp', [
         'ui.bootstrap'
     ]).
     config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/transactions', {templateUrl: 'partials/transactions.html', controller: 'LedgerController'});
-        $routeProvider.when('/ledger', {templateUrl: 'partials/ledger.html', controller: 'LedgerController'});
+        $routeProvider.when('/transactions', {templateUrl: 'partials/transactions.html', controller: 'RippleController'});
+        $routeProvider.when('/ledger', {templateUrl: 'partials/ledger.html', controller: 'RippleController'});
         $routeProvider.otherwise({redirectTo: '/transactions'});
     }]);
