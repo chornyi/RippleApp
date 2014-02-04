@@ -17,6 +17,9 @@ controllerModule.controller('RippleController', function ($scope, rippleService)
     init();
 
     rippleService.onTransactionUpdate(function (data) {
+        if (data && data.transaction && data.transaction.date) {
+            data.transaction.date = new Date(data.transaction.date * 1000);
+        }
         $scope.transactions.add(data);
     });
 
